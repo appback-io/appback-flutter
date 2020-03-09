@@ -1,10 +1,9 @@
 class AppBackException implements Exception {
-    int code;
-    String message;
+    String reason;
     
-    AppBackException(this.code, this.message);
+    AppBackException(this.reason);
     
     @override
   String toString() =>
-        "AppBackException: Code: $code with message: $message.";
+        "AppBackException: Reason: $reason.";
 }

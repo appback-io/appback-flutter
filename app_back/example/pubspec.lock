@@ -4,7 +4,7 @@ packages:
   app_back:
     dependency: "direct main"
     description:
-      path: "../app_back"
+      path: ".."
       relative: true
     source: path
     version: "0.0.1"
@@ -64,13 +64,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.3"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -81,13 +74,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get_it:
-    dependency: transitive
-    description:
-      name: get_it
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
   http:
     dependency: transitive
     description:
@@ -143,7 +129,7 @@ packages:
       name: pedantic
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.0+1"
+    version: "1.9.0"
   petitparser:
     dependency: transitive
     description:
