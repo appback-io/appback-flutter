@@ -4,7 +4,7 @@ import 'package:example/translations_view.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-    await AppBack.instance.configure("8FUNFq0gTAyOjAVWgX0YZIvSyqm27QriDdFYWeAWvWnYeWbaePjOJljMa3Vl");
+    await AppBack.instance.configure("YOUR_API_KEY");
     runApp(AppBackExample());
 }
 

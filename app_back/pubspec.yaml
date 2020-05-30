@@ -1,8 +1,8 @@
 name: app_back
 description: Library to implement AppBack services in Flutter applications.
-version: 0.0.1
+version: 0.0.3
 author: Nicolás David Muñoz Cuervo
-homepage: https://github.com/ndmunoz/app_back
+homepage: https://github.com/appback-io/appback-flutter
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
