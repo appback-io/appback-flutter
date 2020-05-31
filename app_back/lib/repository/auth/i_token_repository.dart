@@ -1,5 +1,5 @@
 import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/token.dart';
+import 'package:app_back/models/auth.dart';
 
 abstract class ITokenRepository {
     
@@ -7,5 +7,5 @@ abstract class ITokenRepository {
     /// returns the token, throws [AppBackException] for the following reasons:
     /// 400 There was a 'Bad request',
     /// 404 The resource was not found, this happens e.g when the api router identifier doesn't exist.
-    Future<Token> getToken(String secretKey);
+    void getToken(String secretKey, Function(Auth) onSuccess);
 }

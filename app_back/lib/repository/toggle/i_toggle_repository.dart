@@ -3,6 +3,7 @@ import 'package:app_back/models/toggle.dart';
 
 abstract class IToggleRepository {
     void getToggles(
+        String endpoint,
         String token,
         String router,
         Function(List<Toggle>) onSuccess,

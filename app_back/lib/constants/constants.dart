@@ -1,9 +1,9 @@
-const String _kBASE_URL = "https://appback.io/api";
-const String _kBASE_V_URL = "$_kBASE_URL/v1";
-const String _kROUTER_SUFFIX = "?router=";
-const String kTOKEN_URL = "$_kBASE_URL/token";
-const String kTRANSLATIONS_URL = "$_kBASE_V_URL/translations$_kROUTER_SUFFIX";
-const String kTOGGLE_URL = "$_kBASE_V_URL/toggles$_kROUTER_SUFFIX";
-const String kEVENT_LOG_URL = "$_kBASE_V_URL/eventLog$_kROUTER_SUFFIX";
+const String kROUTER_SUFFIX = "?router=";
+const String kLANGUAGE_IDENTIFIER = "&language_identifier=";
+const String kAPI_URL = "https://api-auth.appback.io/api";
+const String kTOKEN_URL = "/token";
+const String kTRANSLATIONS_URL = "/api/v1/translations";
+const String kTOGGLE_URL = "/api/v1/toggles";
+const String kEVENT_LOG_URL = "/api/v1/eventLog$kROUTER_SUFFIX";
 const String kBEARER = "Bearer ";
 const String kAUTHORIZATION = "Authorization";

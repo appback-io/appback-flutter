@@ -7,9 +7,10 @@ abstract class ITranslationRepository {
     /// [onSuccess] called when the translations were successfully retrieved and returns them as an argument
     /// [onFailure] called when there was an error getting the translations with [AppBackException] as an argument.
     void getTranslations(
+        String endpoint,
         String token,
         String router,
+        String languageIdentifier,
         Function(List<Translation>) onSuccess,
-        Function(AppBackException) onFailure
-        );
+        Function(AppBackException) onFailure);
 }

@@ -4,6 +4,6 @@ class AppBackException implements Exception {
     AppBackException(this.reason);
     
     @override
-  String toString() =>
+    String toString() =>
         "AppBackException: Reason: $reason.";
 }

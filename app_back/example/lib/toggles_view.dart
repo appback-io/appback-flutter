@@ -11,12 +11,6 @@ class TogglesView extends StatefulWidget {
 class _TogglesViewState extends State<TogglesView> {
     List<Toggle> _toggles = [];
     
-    @override
-    void initState() {
-        AppBack.instance.getToggles("flutter_colombia_toggles", _onSuccess, _onFailure);
-        super.initState();
-    }
-    
     void _onSuccess(List<Toggle> toggles) {
         setState(() {
             _toggles = toggles;
@@ -26,19 +20,32 @@ class _TogglesViewState extends State<TogglesView> {
     void _onFailure(AppBackException appBackException) {
         print(appBackException.reason);
     }
-    
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: ListView.builder(
-                    itemCount: _toggles.length,
-                    itemBuilder: (_, index) =>
-                        ListTile(
-                            title: Text(_toggles[index].key),
-                            subtitle: Text(_toggles[index].value.toString()),
-                        )
-                ),
+            body: Column(
+                children: [
+                    Expanded(
+                        flex: 14,
+                        child: ListView.builder(
+                            itemCount: _toggles.length,
+                            itemBuilder: (_, index) =>
+                                ListTile(
+                                    title: Text(_toggles[index].key),
+                                    subtitle: Text(_toggles[index].value.toString()),
+                                )
+                        ),
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child: RaisedButton(
+                            child: Text('Fetch toggles'),
+                            onPressed: () => AppBack.instance.getToggles("toggles_flutter_test", _onSuccess, _onFailure)
+                        ),
+                    ),
+                    Padding(padding: EdgeInsets.all(8))
+                ],
             ),
         );
     }
