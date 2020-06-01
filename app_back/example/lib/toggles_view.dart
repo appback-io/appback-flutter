@@ -41,7 +41,7 @@ class _TogglesViewState extends State<TogglesView> {
                         flex: 1,
                         child: RaisedButton(
                             child: Text('Fetch toggles'),
-                            onPressed: () => AppBack.instance.getToggles("toggles_flutter_test", _onSuccess, _onFailure)
+                            onPressed: () => AppBack.instance.logEvent()
                         ),
                     ),
                     Padding(padding: EdgeInsets.all(8))

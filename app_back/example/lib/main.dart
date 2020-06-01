@@ -1,7 +1,8 @@
 import 'package:app_back/app_back.dart';
-import 'package:example/toggles_view.dart';
-import 'package:example/translations_view.dart';
 import 'package:flutter/material.dart';
+
+import 'toggles_view.dart';
+import 'translations_view.dart';
 
 void main() async {
     AppBack.instance.configure("YOUR_API_KEY");

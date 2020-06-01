@@ -1,6 +1,6 @@
-# example
+# hello_example
 
-A new Flutter project.
+Demonstrates how to use the hello plugin.
 
 ## Getting Started
 

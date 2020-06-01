@@ -11,6 +11,7 @@ import 'package:app_back/repository/toggle/i_toggle_repository.dart';
 import 'package:app_back/repository/toggle/toggle_repository.dart';
 import 'package:app_back/repository/translation/i_translation_repository.dart';
 import 'package:app_back/repository/translation/translation_repository.dart';
+import 'package:flutter/services.dart';
 
 /// Class that contains the public API for the Flutter library. This is a singleton and it's the entry point of
 /// the Flutter AppBack SDK.
@@ -18,6 +19,7 @@ import 'package:app_back/repository/translation/translation_repository.dart';
 
 class AppBack {
     static final AppBack instance = AppBack._();
+    static const platform = const MethodChannel('appback.io/battery');
     Endpoint _endpoint;
     Token _token;
     ITokenRepository _tokenRepository;
@@ -61,8 +63,19 @@ class AppBack {
     }
     
     void logEvent() {
-        checkAppBackIsConfigured();
-        
+        //checkAppBackIsConfigured();
+        _getBatteryLevel();
+    }
+    
+    void _getBatteryLevel() async {
+        String batteryLevel;
+        try {
+            final int result = await platform.invokeMethod('getBatteryLevel');
+            batteryLevel = 'Battery level at $result%.';
+        } on PlatformException catch (error) {
+            batteryLevel = "Failed to get battery level: '${error.message}'";
+        }
+        print(batteryLevel);
     }
     
     void _onAppBackConfigured(Auth auth) {
