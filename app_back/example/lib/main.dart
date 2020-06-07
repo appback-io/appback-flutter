@@ -6,7 +6,7 @@ import 'toggles_view.dart';
 import 'translations_view.dart';
 
 void main() async {
-    AppBack.instance.configure("b9B0uGI6ss29WAzG4ggO8Y3DMEwlCSoUKBOU5EXpdeaoL0HiTO1590953371");
+    AppBack.instance.configure("YOUR_API_KEY");
     runApp(AppBackExample());
 }
 

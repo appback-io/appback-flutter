@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e18881-db7a-4fd6-ac50-435ce5253f94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app_back/example/ios/Runner/connectivity/ConnectivityUtils.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/example/ios/Runner/constants/GeneralConstants.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/example/ios/Runner/device/DeviceUtils.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/example/ios/Runner/extensions/UIDevice.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/storage/StorageUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/storage/StorageUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/src/helpers/platform_channel_methods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/helpers/platform_channel_methods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590994221295</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated Android compile version">
+      <created>1591572137807</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591572137807</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,9 +195,10 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="355" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1591559927189" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1590994220507">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="110" width="790" height="919" key="CommitChangelistDialog2" timestamp="1591572137596">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
+    <state x="461" y="110" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1591572137596" />
     <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1590994220507" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590871816433">
       <screen x="0" y="0" width="1920" height="1040" />
