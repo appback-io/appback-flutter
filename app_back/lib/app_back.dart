@@ -14,7 +14,6 @@ import 'package:app_back/src/repository/toggle/toggle_repository.dart';
 import 'package:app_back/src/repository/translation/i_translation_repository.dart';
 import 'package:app_back/src/repository/translation/translation_repository.dart';
 import 'package:app_back/src/helpers/event_log_mapper.dart';
-import 'package:flutter/services.dart';
 
 /// Class that contains the public API for the Flutter library. This is a singleton and it's the entry point of
 /// the Flutter AppBack SDK.
