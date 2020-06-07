@@ -1,4 +1,4 @@
-import 'package:app_back/dtos/translation_dto.dart';
+import 'package:app_back/src/dtos/translation_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'translation_parent_dto.g.dart';

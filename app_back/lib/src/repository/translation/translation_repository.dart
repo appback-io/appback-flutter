@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:app_back/constants/constants.dart';
-import 'package:app_back/dtos/translation_parent_dto.dart';
+import 'package:app_back/src/constants/constants.dart';
+import 'package:app_back/src/dtos/translation_parent_dto.dart';
 import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/interactors/translation_converter.dart';
+import 'package:app_back/src/converters/translation_converter.dart';
 import 'package:app_back/models/translation.dart';
-import 'package:app_back/repository/translation/i_translation_repository.dart';
+import 'package:app_back/src/repository/translation/i_translation_repository.dart';
 import 'package:http/http.dart' as http;
 
 class TranslationRepository implements ITranslationRepository {
@@ -14,7 +14,7 @@ class TranslationRepository implements ITranslationRepository {
     
     @override
     void getTranslations(String endpoint, String token, String router, String languageIdentifier, Function(List<Translation>) onSuccess, Function(AppBackException) onFailure) {
-        _client.get("$endpoint$kTRANSLATIONS_URL$kROUTER_SUFFIX$router$kLANGUAGE_IDENTIFIER$languageIdentifier", headers: {"Authorization": kBEARER + token}).then((response) {
+        _client.get("$endpoint$kTRANSLATIONS_URL$kROUTER_SUFFIX$router$kLANGUAGE_IDENTIFIER$languageIdentifier", headers: {kAUTHORIZATION: kBEARER + token}).then((response) {
             if (response.statusCode == 200) {
                 final jsonResponse = jsonDecode(response.body);
                 TranslationParentDto translationParentDto = TranslationParentDto.fromJson(jsonResponse);

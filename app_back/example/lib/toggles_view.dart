@@ -20,7 +20,7 @@ class _TogglesViewState extends State<TogglesView> {
     void _onFailure(AppBackException appBackException) {
         print(appBackException.reason);
     }
-
+    
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -41,7 +41,7 @@ class _TogglesViewState extends State<TogglesView> {
                         flex: 1,
                         child: RaisedButton(
                             child: Text('Fetch toggles'),
-                            onPressed: () => AppBack.instance.logEvent()
+                            onPressed: () => AppBack.instance.getToggles("toggles_flutter_test", _onSuccess, _onFailure)
                         ),
                     ),
                     Padding(padding: EdgeInsets.all(8))

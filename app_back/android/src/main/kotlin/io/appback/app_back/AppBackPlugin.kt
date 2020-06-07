@@ -1,68 +1,46 @@
 package io.appback.app_back
 
 import android.content.Context
-import android.content.ContextWrapper
-import android.content.Intent
-import android.content.IntentFilter
-import android.os.BatteryManager
-import android.os.Build
+import io.appback.app_back.battery.BatteryUtils
+import io.appback.app_back.device.DeviceUtils
+import io.appback.app_back.storage.StorageUtils
+import io.appback.app_back.connectivity.ConnectivityUtils
 import io.flutter.embedding.engine.plugins.FlutterPlugin
-import io.flutter.plugin.common.*
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
+import io.flutter.plugin.common.BinaryMessenger
+import io.flutter.plugin.common.MethodCall
+import io.flutter.plugin.common.MethodChannel
 
+class AppBackPlugin: FlutterPlugin, MethodChannel.MethodCallHandler {
+    private lateinit var channel : MethodChannel
+    private lateinit var applicationContext: Context
 
-/** AppBackPlugin */
-class AppBackPlugin: FlutterPlugin, MethodCallHandler {
-  private lateinit var channel : MethodChannel
-  private lateinit var applicationContext: Context
-
-  companion object {
-    fun registerWith(registar: PluginRegistry.Registrar) {
-      val instance = AppBackPlugin()
-      instance.onAttachedToEngine(registar.context(), registar.messenger())
+    private fun onAttachedToEngine(applicationContext: Context, messenger: BinaryMessenger) {
+        this.applicationContext = applicationContext
+        channel = MethodChannel(messenger, GeneralConstants.kPLATFORM_CHANNEL)
+        channel.setMethodCallHandler(this)
     }
-  }
 
-  private fun getBatteryLevel(): Int? {
-    val batteryLevel: Int
-    batteryLevel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      val batteryManager: BatteryManager = applicationContext.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-      batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-    } else {
-      val intent = ContextWrapper(applicationContext).registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
-      if (intent != null) {
-        return intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) * 100 / intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
-      }
-      return null
+    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+        onAttachedToEngine(flutterPluginBinding.applicationContext, flutterPluginBinding.binaryMessenger)
     }
-    return batteryLevel
-  }
 
-  private fun onAttachedToEngine(applicationContext: Context, messenger: BinaryMessenger) {
-    this.applicationContext = applicationContext
-    channel = MethodChannel(messenger, "appback.io/battery")
-    channel.setMethodCallHandler(this)
-  }
-
-  override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    onAttachedToEngine(flutterPluginBinding.applicationContext, flutterPluginBinding.binaryMessenger)
-  }
-
-  override fun onMethodCall( call: MethodCall, result: Result) {
-    if (call.method == "getBatteryLevel") {
-      val batteryLevel = getBatteryLevel()
-      if (batteryLevel != -1) {
-        result.success(batteryLevel)
-      } else {
-        result.error("UNAVAILABLE", "Battery level not available.", null)
-      }
-    } else {
-      result.notImplemented()
+    override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
+        when(call.method) {
+            GeneralConstants.kGET_BATTERY_LEVEL -> BatteryUtils.invokeBatteryLevel(applicationContext, result)
+            GeneralConstants.kGET_DEVICE_VERSION -> DeviceUtils.invokeDeviceVersion(result)
+            GeneralConstants.kGET_AVAILABLE_STORAGE -> StorageUtils.invokeAvailableStorage(result)
+            GeneralConstants.kGET_TOTAL_STORAGE -> StorageUtils.invokeTotalStorage(result)
+            GeneralConstants.kGET_DEVICE_NAME -> DeviceUtils.invokeDeviceName(result)
+            GeneralConstants.kGET_DEVICE_ORIENTATION -> DeviceUtils.invokeDeviceOrientation(applicationContext, result)
+            GeneralConstants.kGET_CARRIER_NAME -> ConnectivityUtils.invokeCarrierName(applicationContext, result)
+            GeneralConstants.kGET_CONNECTION_TYPE -> ConnectivityUtils.invokeConnectionType(applicationContext, result)
+            GeneralConstants.kGET_APPLICATION_VERSION -> DeviceUtils.invokeApplicationVersion(applicationContext, result)
+            GeneralConstants.kGET_DEVICE_ID -> DeviceUtils.invokeDeviceID(applicationContext, result)
+            else -> result.notImplemented()
+        }
     }
-  }
 
-  override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
-    channel.setMethodCallHandler(null)
-  }
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+        channel.setMethodCallHandler(null)
+    }
 }

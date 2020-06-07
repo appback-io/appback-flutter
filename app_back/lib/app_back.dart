@@ -5,12 +5,15 @@ import 'package:app_back/models/endpoint.dart';
 import 'package:app_back/models/toggle.dart';
 import 'package:app_back/models/token.dart';
 import 'package:app_back/models/translation.dart';
-import 'package:app_back/repository/auth/i_token_repository.dart';
-import 'package:app_back/repository/auth/token_repository.dart';
-import 'package:app_back/repository/toggle/i_toggle_repository.dart';
-import 'package:app_back/repository/toggle/toggle_repository.dart';
-import 'package:app_back/repository/translation/i_translation_repository.dart';
-import 'package:app_back/repository/translation/translation_repository.dart';
+import 'package:app_back/src/repository/auth/i_token_repository.dart';
+import 'package:app_back/src/repository/auth/token_repository.dart';
+import 'package:app_back/src/repository/logger/i_logger_repository.dart';
+import 'package:app_back/src/repository/logger/logger_repository.dart';
+import 'package:app_back/src/repository/toggle/i_toggle_repository.dart';
+import 'package:app_back/src/repository/toggle/toggle_repository.dart';
+import 'package:app_back/src/repository/translation/i_translation_repository.dart';
+import 'package:app_back/src/repository/translation/translation_repository.dart';
+import 'package:app_back/src/helpers/event_log_mapper.dart';
 import 'package:flutter/services.dart';
 
 /// Class that contains the public API for the Flutter library. This is a singleton and it's the entry point of
@@ -19,17 +22,18 @@ import 'package:flutter/services.dart';
 
 class AppBack {
     static final AppBack instance = AppBack._();
-    static const platform = const MethodChannel('appback.io/battery');
     Endpoint _endpoint;
     Token _token;
     ITokenRepository _tokenRepository;
     IToggleRepository _toggleRepository;
     ITranslationRepository _translationRepository;
+    ILoggerRepository _loggerRepository;
     
     AppBack._() {
         _tokenRepository = TokenRepository();
         _translationRepository = TranslationRepository();
         _toggleRepository = ToggleRepository();
+        _loggerRepository = LoggerRepository();
     }
 
     void checkAppBackIsConfigured() {
@@ -62,20 +66,11 @@ class AppBack {
         _translationRepository.getTranslations(_endpoint?.url, _token?.accessToken, router, languageIdentifier, onSuccess, onFailure);
     }
     
-    void logEvent() {
-        //checkAppBackIsConfigured();
-        _getBatteryLevel();
-    }
-    
-    void _getBatteryLevel() async {
-        String batteryLevel;
-        try {
-            final int result = await platform.invokeMethod('getBatteryLevel');
-            batteryLevel = 'Battery level at $result%.';
-        } on PlatformException catch (error) {
-            batteryLevel = "Failed to get battery level: '${error.message}'";
-        }
-        print(batteryLevel);
+    void addEventLog(String router, String eventName, Map<String, String> parameters, Function onSuccess, Function(AppBackException) onFailure, {bool deviceInformation = true} ) {
+        checkAppBackIsConfigured();
+        EventLogMapper.mapParameters(eventName, router, parameters)
+            .then((mappedParameters) => _loggerRepository.logEvent(_endpoint?.url, _token?.accessToken, mappedParameters, onSuccess, onFailure))
+            .catchError((error) => onFailure(AppBackException(error.toString())));
     }
     
     void _onAppBackConfigured(Auth auth) {

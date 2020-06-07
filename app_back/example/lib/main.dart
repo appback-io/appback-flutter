@@ -1,11 +1,12 @@
 import 'package:app_back/app_back.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_example/event_logs_view.dart';
 
 import 'toggles_view.dart';
 import 'translations_view.dart';
 
 void main() async {
-    AppBack.instance.configure("YOUR_API_KEY");
+    AppBack.instance.configure("b9B0uGI6ss29WAzG4ggO8Y3DMEwlCSoUKBOU5EXpdeaoL0HiTO1590953371");
     runApp(AppBackExample());
 }
 
@@ -33,6 +34,10 @@ class _AppBackExampleState extends State<AppBackExample> {
                             icon: Icon(Icons.power_settings_new),
                             title: Text('Toggles'),
                         ),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.event_note),
+                            title: Text('Event Log'),
+                        ),
                     ],
                     currentIndex: _currentIndex,
                     onTap: (newIndex) => setState(() => _currentIndex = newIndex),
@@ -47,6 +52,8 @@ class _AppBackExampleState extends State<AppBackExample> {
                 return TranslationsView();
             case 1:
                 return TogglesView();
+            case 2:
+                return EventLogsView();
             default:
                 return TranslationsView();
         }
