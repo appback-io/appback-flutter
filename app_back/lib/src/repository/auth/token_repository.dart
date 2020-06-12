@@ -23,6 +23,8 @@ class TokenRepository implements ITokenRepository {
                 onSuccess(Auth(token, endpoint));
             } else if (response.statusCode == 400) {
                 throw AppBackException("Bad request");
+            } else if (response.statusCode == 401) {
+                throw AppBackException("Auth error, please verify your API_KEY");
             } else if (response.statusCode == 404) {
                 throw AppBackException("Resource Not Found");
             } else {
