@@ -1,55 +1,96 @@
-library app_back;
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/toggle.dart';
-import 'package:app_back/models/token.dart';
-import 'package:app_back/models/translation.dart';
-import 'package:app_back/repository/auth/i_token_repository.dart';
-import 'package:app_back/repository/auth/token_repository.dart';
-import 'package:app_back/repository/toggle/i_toggle_repository.dart';
-import 'package:app_back/repository/toggle/toggle_repository.dart';
-import 'package:app_back/repository/translation/i_translation_repository.dart';
-import 'package:app_back/repository/translation/translation_repository.dart';
-import 'package:flutter/foundation.dart';
+library appback_sdk;
+
+import 'package:appback_sdk/exceptions/app_back_exception.dart';
+import 'package:appback_sdk/models/auth.dart';
+import 'package:appback_sdk/models/endpoint.dart';
+import 'package:appback_sdk/models/toggle.dart';
+import 'package:appback_sdk/models/token.dart';
+import 'package:appback_sdk/models/translation.dart';
+import 'package:appback_sdk/src/repository/auth/i_token_repository.dart';
+import 'package:appback_sdk/src/repository/auth/token_repository.dart';
+import 'package:appback_sdk/src/repository/logger/i_logger_repository.dart';
+import 'package:appback_sdk/src/repository/logger/logger_repository.dart';
+import 'package:appback_sdk/src/repository/toggle/i_toggle_repository.dart';
+import 'package:appback_sdk/src/repository/toggle/toggle_repository.dart';
+import 'package:appback_sdk/src/repository/translation/i_translation_repository.dart';
+import 'package:appback_sdk/src/repository/translation/translation_repository.dart';
+import 'package:appback_sdk/src/helpers/event_log_mapper.dart';
 
 /// Class that contains the public API for the Flutter library. This is a singleton and it's the entry point of
 /// the Flutter AppBack SDK.
 /// Author: nicdamun
 
 class AppBack {
-    static final AppBack instance = AppBack._();
-    Token _token;
-    ITokenRepository _tokenRepository;
-    ITranslationRepository _translationRepository;
-    IToggleRepository _toggleRepository;
-    
-    AppBack._() {
-        _tokenRepository = TokenRepository();
-        _translationRepository = TranslationRepository();
-        _toggleRepository = ToggleRepository();
-    }
-    
-    /// This method configures the instance of [AppBack] by identifying the current session with
-    /// the [secretKey].
-    Future<void> configure(String secretKey) async {
-        try {
-            _token = await _tokenRepository.getToken(secretKey);
-        } on AppBackException catch (error) {
-            debugPrint(error.reason);
-            throw error;
-        }
-    }
-    
-    /// Gets the translations of [router]
-    /// [onSuccess] called when the translations were successfully retrieved and contains the list as an argument.
-    /// [onFailure] called when there was an error getting the translations and a [AppBackException] with more information is returned.
-    void getTranslations(String router, Function(List<Translation>) onSuccess, Function(AppBackException) onFailure) {
-        _translationRepository.getTranslations(_token?.accessToken ?? "", router, onSuccess, onFailure);
-    }
+  static final AppBack instance = AppBack._();
+  Endpoint _endpoint;
+  Token _token;
+  ITokenRepository _tokenRepository;
+  IToggleRepository _toggleRepository;
+  ITranslationRepository _translationRepository;
+  ILoggerRepository _loggerRepository;
 
-    /// Gets the toggles of [router]
-    /// [onSuccess] called when the toggles were successfully retrieved and contains the list as an argument.
-    /// [onFailure] called when there was an error getting the toggles and a [AppBackException] with more information is returned.
-    void getToggles(String router, Function(List<Toggle>) onSuccess, Function(AppBackException) onFailure) {
-        _toggleRepository.getToggles(_token?.accessToken ?? "", router, onSuccess, onFailure);
+  AppBack._() {
+    _tokenRepository = TokenRepository();
+    _translationRepository = TranslationRepository();
+    _toggleRepository = ToggleRepository();
+    _loggerRepository = LoggerRepository();
+  }
+
+  void checkAppBackIsConfigured() {
+    if (_endpoint == null || _token == null) {
+      throw AppBackException(
+          "AppBack is not initialized.\nEnsure secretKey is correct.");
     }
+  }
+
+  /// This method configures the instance of [AppBack] by identifying the current session with
+  /// the [secretKey].
+  /// Throws an [AppBackException] for the following reasons:
+  /// 400 There was a 'Bad request',
+  /// 404 The resource was not found, this happens e.g when the api router identifier doesn't exist.
+  void configure(String apiKey) =>
+      _tokenRepository.getToken(apiKey, _onAppBackConfigured);
+
+  /// Gets the toggles of [router]
+  /// [onSuccess] called when the toggles were successfully retrieved and contains the list as an argument.
+  /// [onFailure] called when there was an error getting the toggles and a [AppBackException] with more information is returned.
+  void getToggles(String router, Function(List<Toggle>) onSuccess,
+      Function(AppBackException) onFailure) {
+    checkAppBackIsConfigured();
+    _toggleRepository.getToggles(
+        _endpoint?.url, _token?.accessToken, router, onSuccess, onFailure);
+  }
+
+  /// Gets the translations of [router]
+  /// [onSuccess] called when the translations were successfully retrieved and contains the list as an argument.
+  /// [onFailure] called when there was an error getting the translations and a [AppBackException] with more information is returned.
+  void getTranslations(
+      String router,
+      String languageIdentifier,
+      Function(List<Translation>) onSuccess,
+      Function(AppBackException) onFailure) {
+    checkAppBackIsConfigured();
+    _translationRepository.getTranslations(_endpoint?.url, _token?.accessToken,
+        router, languageIdentifier, onSuccess, onFailure);
+  }
+
+  void addEventLog(
+      String router,
+      String eventName,
+      Map<String, String> parameters,
+      Function onSuccess,
+      Function(AppBackException) onFailure,
+      {bool deviceInformation = true}) {
+    checkAppBackIsConfigured();
+    EventLogMapper.mapParameters(
+            eventName, router, parameters, deviceInformation)
+        .then((mappedParameters) => _loggerRepository.logEvent(_endpoint?.url,
+            _token?.accessToken, mappedParameters, onSuccess, onFailure))
+        .catchError((error) => onFailure(AppBackException(error.toString())));
+  }
+
+  void _onAppBackConfigured(Auth auth) {
+    _token = auth.token;
+    _endpoint = auth.endpoint;
+  }
 }

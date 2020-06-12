@@ -1,21 +1,24 @@
-name: example
-description: A new Flutter project.
+name: hello_example
+description: Demonstrates how to use the hello plugin.
 version: 1.0.0
 
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  appback_sdk: ^0.0.1
   flutter:
     sdk: flutter
-  app_back:
-    path: ../../app_back
+
+  cupertino_icons: ^0.1.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-# The following section is specific to Flutter.
 flutter:
-
   uses-material-design: true

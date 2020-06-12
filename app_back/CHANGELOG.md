@@ -1,3 +1,8 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 06/11/2020
 
-* TODO: Describe initial release.
+* First version of AppBack.
+
+## [0.0.1+1] - 06/11/2020
+
+* Formatted code
+* Added LICENSE

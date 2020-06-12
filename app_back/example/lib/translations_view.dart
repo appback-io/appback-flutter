@@ -1,6 +1,6 @@
-import 'package:app_back/app_back.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/translation.dart';
+import 'package:appback_sdk/app_back.dart';
+import 'package:appback_sdk/exceptions/app_back_exception.dart';
+import 'package:appback_sdk/models/translation.dart';
 import 'package:flutter/material.dart';
 
 class TranslationsView extends StatefulWidget {
@@ -11,12 +11,6 @@ class TranslationsView extends StatefulWidget {
 class _TranslationsViewState extends State<TranslationsView> {
     
     List<Translation> _translations = [];
-    
-    @override
-    void initState() {
-        AppBack.instance.getTranslations("flutter_colombia_translations", _onSuccess, _onFailure);
-        super.initState();
-    }
     
     void _onSuccess(List<Translation> translations) {
         setState(() {
@@ -31,15 +25,28 @@ class _TranslationsViewState extends State<TranslationsView> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: ListView.builder(
-                    itemCount: _translations.length,
-                    itemBuilder: (_, index) =>
-                        ListTile(
-                            title: Text(_translations[index].key),
-                            subtitle: Text(_translations[index].value),
-                        )
-                ),
+            body: Column(
+                children: [
+                    Expanded(
+                        flex: 14,
+                        child: ListView.builder(
+                            itemCount: _translations.length,
+                            itemBuilder: (_, index) =>
+                                ListTile(
+                                    title: Text(_translations[index].key),
+                                    subtitle: Text(_translations[index].value),
+                                )
+                        ),
+                    ),
+                    Expanded(
+                        flex: 1,
+                        child: RaisedButton(
+                            child: Text('Fetch translations'),
+                            onPressed: () => AppBack.instance.getTranslations("translations_flutter_test", "en_US", _onSuccess, _onFailure)
+                        ),
+                    ),
+                    Padding(padding: EdgeInsets.all(8))
+                ],
             ),
         );
     }
