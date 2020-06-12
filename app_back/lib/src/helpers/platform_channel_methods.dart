@@ -17,7 +17,7 @@ class PlatformChannelMethods {
         String batteryLevel;
         try {
             final int result = await _platform.invokeMethod('getBatteryLevel');
-            batteryLevel = '$result %';
+            if (result != null) batteryLevel = '$result %';
         } on PlatformException catch (error) {
             print("Failed to get battery level: '${error.message}'");
         }
@@ -96,8 +96,7 @@ class PlatformChannelMethods {
     static Future<String> _getAvailableStorage() async {
         String availableStorage;
         try {
-            final num result = await _platform.invokeMethod('getAvailableStorage');
-            availableStorage = '$result GB';
+            availableStorage = await _platform.invokeMethod('getAvailableStorage');
         } on PlatformException catch (error) {
             availableStorage = "Failed to get available storage: '${error.message}'";
         }
@@ -107,8 +106,7 @@ class PlatformChannelMethods {
     static Future<String> _getTotalStorage() async {
         String totalStorage;
         try {
-            final num result = await _platform.invokeMethod('getTotalStorage');
-            totalStorage = '$result GB';
+            totalStorage = await _platform.invokeMethod('getTotalStorage');
         } on PlatformException catch (error) {
             totalStorage = "Failed to get total storage: '${error.message}'";
         }
