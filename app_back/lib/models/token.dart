@@ -1,7 +1,7 @@
 class Token {
-    String _accessToken;
+  String _accessToken;
 
-    Token(this._accessToken);
-    
-    String get accessToken => _accessToken;
+  Token(this._accessToken);
+
+  String get accessToken => _accessToken;
 }

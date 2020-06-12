@@ -4,12 +4,13 @@ part 'translation_dto.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class TranslationDto {
-    String key;
-    String value;
+  String key;
+  String value;
 
-    TranslationDto(this.key, this.value);
+  TranslationDto(this.key, this.value);
 
-    factory TranslationDto.fromJson(Map<String, dynamic> json) => _$TranslationDtoFromJson(json);
+  factory TranslationDto.fromJson(Map<String, dynamic> json) =>
+      _$TranslationDtoFromJson(json);
 
-    Map<String, dynamic> toJson() => _$TranslationDtoToJson(this);
+  Map<String, dynamic> toJson() => _$TranslationDtoToJson(this);
 }

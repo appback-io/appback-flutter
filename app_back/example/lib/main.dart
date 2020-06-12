@@ -1,4 +1,4 @@
-import 'package:appback/app_back.dart';
+import 'package:appback_sdk/app_back.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_example/event_logs_view.dart';
 

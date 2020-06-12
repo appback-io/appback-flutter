@@ -1,6 +1,6 @@
-import 'package:appback/app_back.dart';
-import 'package:appback/exceptions/app_back_exception.dart';
-import 'package:appback/models/translation.dart';
+import 'package:appback_sdk/app_back.dart';
+import 'package:appback_sdk/exceptions/app_back_exception.dart';
+import 'package:appback_sdk/models/translation.dart';
 import 'package:flutter/material.dart';
 
 class TranslationsView extends StatefulWidget {

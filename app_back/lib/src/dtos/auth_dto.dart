@@ -4,11 +4,13 @@ part 'auth_dto.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class AuthDto {
-    String accessToken;
-    String endpoint;
-    AuthDto({this.accessToken, this.endpoint});
+  String accessToken;
+  String endpoint;
 
-    factory AuthDto.fromJson(Map<String, dynamic> json) => _$AuthDtoFromJson(json);
+  AuthDto({this.accessToken, this.endpoint});
 
-    Map<String, dynamic> toJson() => _$AuthDtoToJson(this);
+  factory AuthDto.fromJson(Map<String, dynamic> json) =>
+      _$AuthDtoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AuthDtoToJson(this);
 }

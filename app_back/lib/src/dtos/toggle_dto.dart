@@ -4,12 +4,13 @@ part 'toggle_dto.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class ToggleDto {
-    String key;
-    String value;
+  String key;
+  String value;
 
-    ToggleDto({this.key, this.value});
+  ToggleDto({this.key, this.value});
 
-    factory ToggleDto.fromJson(Map<String, dynamic> json) => _$ToggleDtoFromJson(json);
+  factory ToggleDto.fromJson(Map<String, dynamic> json) =>
+      _$ToggleDtoFromJson(json);
 
-    Map<String, dynamic> toJson() => _$ToggleDtoToJson(this);
+  Map<String, dynamic> toJson() => _$ToggleDtoToJson(this);
 }

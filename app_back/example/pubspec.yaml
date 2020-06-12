@@ -10,11 +10,9 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  appback_sdk: ^0.0.1
   flutter:
     sdk: flutter
-
-  appback:
-    path: ../../app_back
 
   cupertino_icons: ^0.1.3
 

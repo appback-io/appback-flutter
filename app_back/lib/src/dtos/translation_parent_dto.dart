@@ -1,16 +1,17 @@
-import 'package:appback/src/dtos/translation_dto.dart';
+import 'package:appback_sdk/src/dtos/translation_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'translation_parent_dto.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class TranslationParentDto {
-    List<TranslationDto> translations;
-    
-    TranslationParentDto(List<TranslationDto> translations):
-            translations = translations ?? <TranslationDto>[];
+  List<TranslationDto> translations;
 
-    factory TranslationParentDto.fromJson(Map<String, dynamic> json) => _$TranslationParentDtoFromJson(json);
+  TranslationParentDto(List<TranslationDto> translations)
+      : translations = translations ?? <TranslationDto>[];
 
-    Map<String, dynamic> toJson() => _$TranslationParentDtoToJson(this);
+  factory TranslationParentDto.fromJson(Map<String, dynamic> json) =>
+      _$TranslationParentDtoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TranslationParentDtoToJson(this);
 }
