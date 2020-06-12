@@ -1,5 +1,5 @@
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/auth.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/auth.dart';
 
 abstract class ITokenRepository {
     

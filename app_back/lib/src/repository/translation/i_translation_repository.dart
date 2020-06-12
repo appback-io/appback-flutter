@@ -1,5 +1,5 @@
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/translation.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/translation.dart';
 
 abstract class ITranslationRepository {
     

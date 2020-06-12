@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/src/constants/constants.dart';
-import 'package:app_back/src/repository/logger/i_logger_repository.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/src/constants/constants.dart';
+import 'package:appback/src/repository/logger/i_logger_repository.dart';
 import 'package:http/http.dart' as http;
 
 class LoggerRepository implements ILoggerRepository {

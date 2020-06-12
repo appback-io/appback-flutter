@@ -3,8 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="68e18881-db7a-4fd6-ac50-435ce5253f94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/example/lib/event_logs_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/event_logs_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_back/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/example/lib/toggles_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/toggles_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/example/lib/translations_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/translations_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/app_back.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/app_back.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/models/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/models/auth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/converters/auth_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/converters/auth_converter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/converters/toggle_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/converters/toggle_converter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/converters/translation_converter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/converters/translation_converter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/dtos/toggle_parent_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/dtos/toggle_parent_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/dtos/translation_parent_dto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/dtos/translation_parent_dto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/helpers/event_log_mapper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/helpers/event_log_mapper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/auth/i_token_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/auth/i_token_repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/auth/token_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/auth/token_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/logger/i_logger_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/logger/i_logger_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/logger/logger_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/logger/logger_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/i_toggle_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/i_toggle_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/toggle_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/toggle_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/translation/i_translation_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/translation/i_translation_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/translation/translation_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/translation/translation_repository.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591928635497</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added the case where the API_KEY is incorrect">
+      <created>1591930722661</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1591930722661</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +221,8 @@
     <MESSAGE value="Added AppBackPlugin.kt to handle Android specific platform code and return the current battery level" />
     <MESSAGE value="Updated Android compile version" />
     <MESSAGE value="Workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+    <MESSAGE value="Added the case where the API_KEY is incorrect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the case where the API_KEY is incorrect" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1591018984434">
@@ -206,11 +233,11 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="355" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1591559927189" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1591930697648">
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1591930721746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="110" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1591572137596" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591930697648" />
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591930721746" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590871816433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -219,38 +246,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591485080104" />
-    <state width="0" height="0" key="GridCell.Tab.0.bottom" timestamp="1591928654607">
+    <state width="1879" height="364" key="GridCell.Tab.0.bottom" timestamp="1591931168130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1591571638621" />
     <state width="1398" height="188" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1591570762184" />
-    <state width="0" height="0" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928654607" />
-    <state width="0" height="0" key="GridCell.Tab.0.center" timestamp="1591928654607">
+    <state width="1879" height="364" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591931168130" />
+    <state width="1879" height="364" key="GridCell.Tab.0.center" timestamp="1591931168130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1591571638620" />
     <state width="1398" height="188" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1591570762183" />
-    <state width="0" height="0" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928654607" />
-    <state width="0" height="0" key="GridCell.Tab.0.left" timestamp="1591928654607">
+    <state width="1879" height="364" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591931168130" />
+    <state width="1879" height="364" key="GridCell.Tab.0.left" timestamp="1591931168129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1591571638620" />
     <state width="1398" height="188" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1591570762183" />
-    <state width="0" height="0" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928654607" />
-    <state width="0" height="0" key="GridCell.Tab.0.right" timestamp="1591928654607">
+    <state width="1879" height="364" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591931168129" />
+    <state width="1879" height="364" key="GridCell.Tab.0.right" timestamp="1591931168130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1591571638620" />
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1591570762184" />
-    <state width="0" height="0" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928654607" />
+    <state width="1879" height="364" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591931168130" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1590966960512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1590966960512" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1591928636798">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1591930723685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928636798" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591930723685" />
     <state x="100" y="123" width="1240" height="597" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591571333891">
       <screen x="0" y="23" width="1440" height="798" />
     </state>

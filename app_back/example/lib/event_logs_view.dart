@@ -1,5 +1,5 @@
-import 'package:app_back/app_back.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
+import 'package:appback/app_back.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
 import 'package:flutter/material.dart';
 
 class EventLogsView extends StatefulWidget {

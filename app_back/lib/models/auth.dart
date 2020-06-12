@@ -1,5 +1,5 @@
-import 'package:app_back/models/endpoint.dart';
-import 'package:app_back/models/token.dart';
+import 'package:appback/models/endpoint.dart';
+import 'package:appback/models/token.dart';
 
 class Auth {
     Token _token;

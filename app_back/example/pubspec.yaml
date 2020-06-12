@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  app_back:
+  appback:
     path: ../../app_back
 
   cupertino_icons: ^0.1.3

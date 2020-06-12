@@ -1,12 +1,12 @@
 import 'dart:convert';
-import 'package:app_back/src/constants/constants.dart';
-import 'package:app_back/src/dtos/auth_dto.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/src/converters/auth_converter.dart';
-import 'package:app_back/models/auth.dart';
-import 'package:app_back/models/endpoint.dart';
-import 'package:app_back/models/token.dart';
-import 'package:app_back/src/repository/auth/i_token_repository.dart';
+import 'package:appback/src/constants/constants.dart';
+import 'package:appback/src/dtos/auth_dto.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/src/converters/auth_converter.dart';
+import 'package:appback/models/auth.dart';
+import 'package:appback/models/endpoint.dart';
+import 'package:appback/models/token.dart';
+import 'package:appback/src/repository/auth/i_token_repository.dart';
 import 'package:http/http.dart' as http;
 
 class TokenRepository implements ITokenRepository {

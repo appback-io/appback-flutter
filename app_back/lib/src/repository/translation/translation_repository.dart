@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:app_back/src/constants/constants.dart';
-import 'package:app_back/src/dtos/translation_parent_dto.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/src/converters/translation_converter.dart';
-import 'package:app_back/models/translation.dart';
-import 'package:app_back/src/repository/translation/i_translation_repository.dart';
+import 'package:appback/src/constants/constants.dart';
+import 'package:appback/src/converters/translation_converter.dart';
+import 'package:appback/src/dtos/translation_parent_dto.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/translation.dart';
+import 'package:appback/src/repository/translation/i_translation_repository.dart';
 import 'package:http/http.dart' as http;
 
 class TranslationRepository implements ITranslationRepository {

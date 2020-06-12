@@ -1,4 +1,4 @@
-import 'package:app_back/src/helpers/platform_channel_methods.dart';
+import 'package:appback/src/helpers/platform_channel_methods.dart';
 
 class EventLogMapper {
     static Future<Map<String, dynamic>> mapParameters(String eventName, String router, Map<String, String> parameters, bool deviceInformation) async {

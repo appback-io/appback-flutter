@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:app_back/src/constants/constants.dart';
-import 'package:app_back/src/dtos/toggle_parent_dto.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/src/converters/toggle_converter.dart';
-import 'package:app_back/models/toggle.dart';
-import 'package:app_back/src/repository/toggle/i_toggle_repository.dart';
+import 'package:appback/src/constants/constants.dart';
+import 'package:appback/src/converters/toggle_converter.dart';
+import 'package:appback/src/dtos/toggle_parent_dto.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/toggle.dart';
+import 'package:appback/src/repository/toggle/i_toggle_repository.dart';
 import 'package:http/http.dart' as http;
 
 class ToggleRepository implements IToggleRepository {

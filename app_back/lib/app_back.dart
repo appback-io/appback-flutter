@@ -1,19 +1,19 @@
-library app_back;
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/auth.dart';
-import 'package:app_back/models/endpoint.dart';
-import 'package:app_back/models/toggle.dart';
-import 'package:app_back/models/token.dart';
-import 'package:app_back/models/translation.dart';
-import 'package:app_back/src/repository/auth/i_token_repository.dart';
-import 'package:app_back/src/repository/auth/token_repository.dart';
-import 'package:app_back/src/repository/logger/i_logger_repository.dart';
-import 'package:app_back/src/repository/logger/logger_repository.dart';
-import 'package:app_back/src/repository/toggle/i_toggle_repository.dart';
-import 'package:app_back/src/repository/toggle/toggle_repository.dart';
-import 'package:app_back/src/repository/translation/i_translation_repository.dart';
-import 'package:app_back/src/repository/translation/translation_repository.dart';
-import 'package:app_back/src/helpers/event_log_mapper.dart';
+library appback;
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/auth.dart';
+import 'package:appback/models/endpoint.dart';
+import 'package:appback/models/toggle.dart';
+import 'package:appback/models/token.dart';
+import 'package:appback/models/translation.dart';
+import 'package:appback/src/repository/auth/i_token_repository.dart';
+import 'package:appback/src/repository/auth/token_repository.dart';
+import 'package:appback/src/repository/logger/i_logger_repository.dart';
+import 'package:appback/src/repository/logger/logger_repository.dart';
+import 'package:appback/src/repository/toggle/i_toggle_repository.dart';
+import 'package:appback/src/repository/toggle/toggle_repository.dart';
+import 'package:appback/src/repository/translation/i_translation_repository.dart';
+import 'package:appback/src/repository/translation/translation_repository.dart';
+import 'package:appback/src/helpers/event_log_mapper.dart';
 
 /// Class that contains the public API for the Flutter library. This is a singleton and it's the entry point of
 /// the Flutter AppBack SDK.

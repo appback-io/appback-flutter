@@ -1,6 +1,6 @@
-import 'package:app_back/app_back.dart';
-import 'package:app_back/exceptions/app_back_exception.dart';
-import 'package:app_back/models/toggle.dart';
+import 'package:appback/app_back.dart';
+import 'package:appback/exceptions/app_back_exception.dart';
+import 'package:appback/models/toggle.dart';
 import 'package:flutter/material.dart';
 
 class TogglesView extends StatefulWidget {

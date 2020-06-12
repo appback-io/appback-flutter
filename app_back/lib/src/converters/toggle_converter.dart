@@ -1,5 +1,5 @@
-import 'package:app_back/src/dtos/toggle_dto.dart';
-import 'package:app_back/models/toggle.dart';
+import 'package:appback/src/dtos/toggle_dto.dart';
+import 'package:appback/models/toggle.dart';
 
 extension ToggleConverter on ToggleDto {
     Toggle convertToggleDtoToToggleModel() {
