@@ -67,7 +67,7 @@ class AppBack {
     
     void addEventLog(String router, String eventName, Map<String, String> parameters, Function onSuccess, Function(AppBackException) onFailure, {bool deviceInformation = true} ) {
         checkAppBackIsConfigured();
-        EventLogMapper.mapParameters(eventName, router, parameters)
+        EventLogMapper.mapParameters(eventName, router, parameters, deviceInformation)
             .then((mappedParameters) => _loggerRepository.logEvent(_endpoint?.url, _token?.accessToken, mappedParameters, onSuccess, onFailure))
             .catchError((error) => onFailure(AppBackException(error.toString())));
     }

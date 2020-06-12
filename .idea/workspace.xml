@@ -1,60 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68e18881-db7a-4fd6-ac50-435ce5253f94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/GeneralConstants.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/battery/BatteryUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/connectivity/ConnectivityUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/device/DeviceUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/storage/StorageUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/example/android/app/src/main/kotlin/com/example/hello_example/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/example/lib/event_logs_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/extensions/string_extensions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/helpers/event_log_mapper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/helpers/platform_channel_methods.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/auth/i_token_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/auth/token_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/logger/i_logger_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/logger/logger_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/i_toggle_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/toggle_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/translation/i_translation_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/repository/translation/translation_repository.dart" afterDir="false" />
+    <list default="true" id="68e18881-db7a-4fd6-ac50-435ce5253f94" name="Default Changelist" comment="- Removed unused files and imports.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/AppBackPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/android/src/main/kotlin/io/appback/app_back/AppBackPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/android/app/src/main/kotlin/com/example/hello_example/EmbedderV1Activity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/lib/toggles_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/lib/toggles_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/app_back.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/app_back.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/constants/constants.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/auth_dto.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/auth_dto.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/toggle_dto.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/toggle_dto.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/toggle_parent_dto.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/toggle_parent_dto.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/translation_dto.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/translation_dto.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/translation_parent_dto.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/dtos/translation_parent_dto.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/extensions/string_extensions.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/interactors/auth_converter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/interactors/toggle_converter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/interactors/translation_converter.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/auth/i_token_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/auth/token_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/logger/i_logger_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/logger/logger_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/toggle/i_toggle_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/toggle/toggle_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/translation/i_translation_repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/repository/translation/translation_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app_back/example/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -203,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590994221295</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Android Platform channels to get device information.&#10;- EventLog implemented in SDK and example app.">
+      <created>1591515989208</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591515989208</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- Removed unused files and imports.">
+      <created>1591516049377</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1591516049377</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,17 +196,19 @@
     <MESSAGE value="- Re implementation of sdk with Dashboard 2.0&#10;- Event Logs implementation missing" />
     <MESSAGE value="Added AppBackPlugin.kt to handle Android specific platform code and return the current battery level" />
     <MESSAGE value="Updated Android compile version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Android compile version" />
+    <MESSAGE value="- Android Platform channels to get device information.&#10;- EventLog implemented in SDK and example app." />
+    <MESSAGE value="- Removed unused files and imports." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Removed unused files and imports." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1591018984434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591018984434" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1590994220507">
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1591557958957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1590994220507" />
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591557958957" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590871816433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,30 +217,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591485080104" />
-    <state width="1879" height="248" key="GridCell.Tab.0.bottom" timestamp="1591515824200">
+    <state width="1879" height="373" key="GridCell.Tab.0.bottom" timestamp="1591928196827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="248" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591515824200" />
-    <state width="1879" height="248" key="GridCell.Tab.0.center" timestamp="1591515824200">
+    <state width="1879" height="373" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928196827" />
+    <state width="1879" height="373" key="GridCell.Tab.0.center" timestamp="1591928196826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="248" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591515824200" />
-    <state width="1879" height="248" key="GridCell.Tab.0.left" timestamp="1591515824200">
+    <state width="1879" height="373" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928196826" />
+    <state width="1879" height="373" key="GridCell.Tab.0.left" timestamp="1591928196826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="248" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591515824200" />
-    <state width="1879" height="248" key="GridCell.Tab.0.right" timestamp="1591515824200">
+    <state width="1879" height="373" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928196826" />
+    <state width="1879" height="373" key="GridCell.Tab.0.right" timestamp="1591928196827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="248" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591515824200" />
+    <state width="1879" height="373" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928196827" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1590966960512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1590966960512" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1590994223525">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1591516051115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1590994223525" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591516051115" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590871760129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
