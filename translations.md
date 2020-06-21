@@ -40,6 +40,6 @@ class _TranslationsViewState extends State<TranslationsView> {
 ## Next Steps
 That's it, you can now proceed to our modules guide.
 
-- [Translations](translations.md)
 - [Event Logs](event_logs.md)
+- [Feature Toggles](feature_toggles.md)
 
