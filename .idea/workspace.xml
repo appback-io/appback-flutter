@@ -246,11 +246,11 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="355" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1591559927189" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1592709542444">
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1592709834429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="110" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1591572137596" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709542444" />
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709834429" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590871816433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,22 +283,30 @@
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1591571638620" />
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1591570762184" />
     <state width="1879" height="280" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591939588393" />
+    <state x="184" y="85" key="MergeDialog" timestamp="1592709794812">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="85" key="MergeDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709794812" />
+    <state x="662" y="235" key="MultipleFileMergeDialog" timestamp="1592709794817">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="235" key="MultipleFileMergeDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709794817" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1592705166533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592705166533" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1592709544368">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1592709739181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709544368" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709739181" />
     <state x="100" y="123" width="1240" height="597" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591571333891">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="100" y="123" width="1240" height="597" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.798@0.23.1440.798" timestamp="1591571333891" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591928610911">
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592709818056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591928610911" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709818056" />
     <state width="451" height="166" key="javadoc.popup.new" timestamp="1591515816341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
