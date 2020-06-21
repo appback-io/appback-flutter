@@ -1,4 +1,8 @@
-## Configure Initial Call
+# Flutter Getting Started
+
+Instructions for adding our SDK to your Flutter App.
+
+## Install the SDK
 Flutter SDK is implemented through the pubspec.yaml. If you are not familiar with Flutter/Dart packages, check them out [here](https://pub.dev).
 
 1. First add our SDK to your pubspec.yaml file

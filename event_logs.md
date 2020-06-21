@@ -1,9 +1,11 @@
-# Flutter AppBack Event logs
+# Flutter Event Logs
+
+To use the Event Logs functionality you need to have your SDK configured, if you haven't do so, check out [Installing SDK](README.md)
+
+### Send Event Log
 
 There are times when you want to track your user's events to improve your own product and provide a better user experience.
 AppBack can give you a hand with this.
-
-### Send Event Log
 
 To send an event log we must to the following.
 ```text
@@ -19,6 +21,20 @@ AppBack.instance.addEventLog(
                     _onFailure,
                     deviceInformation: true // Default value
                 ),
+```
+
+**NOTE:** You must have a router previously defined in the [AppBack Dashboard](https://appback.io/).
+
+Where `_controller1`, `_controller2` and `_controller3` are set to some `TextField` widgets for this example like below:
+
+```
+TextField(
+    controller: _controller1,
+    decoration: InputDecoration(
+        border: InputBorder.none,
+        hintText: "Enter value 1"
+    ),
+)
 ```
 
 As you can see, there are some closures called `_onSuccess` and `_onFailure` which will be handle the possible responses from the `addEventLog` method.
@@ -37,7 +53,7 @@ For iOS:
 | _storage         | 17,33 GB / 63,93 GB                  |
 | _device_ID       | 8B977100-7547-46F4-979C-FAABC4AF104A |
 | _battery_level   | 73 %                                 |
-| _carrier         | Avantel                              |
+| _carrier         | ETB 4G                               |
 | _connection_type | WIFI                                 |
 
 For Android:
@@ -48,7 +64,7 @@ For Android:
 | _app_version     | 1.0 (1)                              |
 | _device          | samsung SM-G975F                     |
 | _orientation     | Portrait                             |
-| _storage         | 52.15 GB / 118,03 GB                 |
+| _storage         | 52.15 GB / 118.03 GB                 |
 | _device_ID       | 8B977100-7547-46F4-979C-FAABC4AF104A |
 | _battery_level   | 78 %                                 |
 | _carrier         | Claro                                |
@@ -73,8 +89,6 @@ class _EventLogsViewState extends State<EventLogsView> {
         }
     }
 ```
-
-**NOTE:** You must have a router previously defined in the [AppBack Dashboard](https://appback.io/).
 
 ## Next Steps
 That's it, you can now proceed to our modules guide.
