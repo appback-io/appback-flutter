@@ -1,16 +1,37 @@
-# hello_example
+## Configure Initial Call
+Flutter SDK is implemented through the pubspec.yaml. If you are not familiar with Flutter/Dart packages, check them out [here](https://pub.dev).
 
-Demonstrates how to use the hello plugin.
+1. First add our SDK to your pubspec.yaml file
 
-## Getting Started
+```text
+dependencies:
+    appback_sdk: ^0.0.1+1
+```
 
-This project is a starting point for a Flutter application.
+2. Run from the terminal
 
-A few resources to get you started if this is your first Flutter project:
+```text
+$ flutter pub get
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Configure the SDK
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Open your `main.dart` file since we want AppBack to be ready as soon as your app starts.
+
+And add the configure method from AppBack to your `main` method like this:
+
+```text
+void main() {
+    AppBack.instance.configure("YOUR_API_KEY");
+    runApp(AppBackExample());
+}
+```
+
+As you see above, the method expect an API Key, you can grab one from the dashboard, more information [here](https://appback.io/docs/1.0/apiKeys)
+
+## Next Steps
+That's it, you can now proceed to our modules guide.
+
+- [Feature Toggles](feature_toggles.md)
+- Translations
+- Event Logs
