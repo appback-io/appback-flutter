@@ -13,7 +13,7 @@ AppBack.instance.getTranslations("MY_ROUTER", "MY_LANGUAGE_ID", _onSuccess, _onF
 
 **NOTE:** You must have a router previously defined in the [AppBack Dashboard](https://appback.io/).
 
-As you can see, there are some closures called `_onSuccess` and `_onFailure` which will be handle the possible responses from the `getTranslations` method.
+As you can see, there are some closures called `_onSuccess` and `_onFailure` which will handle the possible responses from the `getTranslations` method.
 The first one receives a list of `Translation` containing all the necessary information about a certain translation and the other one will receive an `AppBackException` containing an error message.
 
 ### Example

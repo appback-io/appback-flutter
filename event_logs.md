@@ -37,7 +37,7 @@ TextField(
 )
 ```
 
-As you can see, there are some closures called `_onSuccess` and `_onFailure` which will be handle the possible responses from the `addEventLog` method.
+As you can see, there are some closures called `_onSuccess` and `_onFailure` which will handle the possible responses from the `addEventLog` method.
 The first one indicates that the event was successfully sent to AppBack and the other one will receive an `AppBackException` containing an error message.
 
 The `deviceInformation` parameter is used to send the following information about the device.

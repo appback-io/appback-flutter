@@ -12,7 +12,7 @@ AppBack.instance.getToggles("MY_ROUTER", _onSuccess, _onFailure)
 
 **NOTE:** You must have a router previously defined in the [AppBack Dashboard](https://appback.io/).
 
-As you can see, there are some closures called `_onSuccess` and `_onFailure` which will be handle the possible responses from the `getToggles` method.
+As you can see, there are some closures called `_onSuccess` and `_onFailure` which will handle the possible responses from the `getToggles` method.
 The first one receives a list of `Toggle` containing all the necessary information about a certain toggle and the other one will receive an `AppBackException` containing an error message.
 
 ### Example
