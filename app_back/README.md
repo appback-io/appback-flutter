@@ -1,6 +1,6 @@
 # app_back
 
-The official Flutter library for Appback.
+The official Flutter library for AppBack.
 
 ## Getting Started
 
