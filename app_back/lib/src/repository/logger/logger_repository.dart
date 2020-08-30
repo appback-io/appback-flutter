@@ -11,8 +11,6 @@ class LoggerRepository implements ILoggerRepository {
   @override
   void logEvent(String endpoint, String token, Map<String, dynamic> parameters,
       Function onSuccess, Function(AppBackException) onFailure) {
-    print(jsonEncode(parameters));
-    print("$endpoint$kEVENT_LOG_URL");
     _client
         .post("$endpoint$kEVENT_LOG_URL",
             headers: {

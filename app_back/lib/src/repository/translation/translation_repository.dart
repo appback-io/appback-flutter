@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:appback_sdk/src/app_back_config.dart';
 import 'package:appback_sdk/src/constants/constants.dart';
 import 'package:appback_sdk/src/converters/translation_converter.dart';
 import 'package:appback_sdk/src/dtos/translation_parent_dto.dart';
@@ -19,6 +20,7 @@ class TranslationRepository implements ITranslationRepository {
       String languageIdentifier,
       Function(List<Translation>) onSuccess,
       Function(AppBackException) onFailure) {
+    AppBackConfig.instance.routers["translations"] = router;
     _client.get(
         "$endpoint$kTRANSLATIONS_URL$kROUTER_SUFFIX$router$kLANGUAGE_IDENTIFIER$languageIdentifier",
         headers: {kAUTHORIZATION: kBEARER + token}).then((response) {

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e18881-db7a-4fd6-ac50-435ce5253f94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app_back/lib/src/app_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/app_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/app_back_config.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/auth/token_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/auth/token_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/i_toggle_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/i_toggle_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/logger/logger_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/logger/logger_repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/toggle_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/toggle/toggle_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_back/lib/src/repository/translation/translation_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_back/lib/src/repository/translation/translation_repository.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592709922882</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added toggle methods by type and Singleton to hold App configuration variables">
+      <created>1598831062891</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598831062891</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,7 +267,8 @@
     <MESSAGE value="Moved documentation files to another folder." />
     <MESSAGE value="Documentation updated&#10;&#10;Signed-off-by: AppBack &lt;libraries@appback.io&gt;" />
     <MESSAGE value="Documentation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation updated" />
+    <MESSAGE value="Added toggle methods by type and Singleton to hold App configuration variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added toggle methods by type and Singleton to hold App configuration variables" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1591018984434">
@@ -271,11 +279,11 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="355" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1591559927189" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1592709922229">
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2" timestamp="1598831061747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="110" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1591572137596" />
-    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709922229" />
+    <state x="614" y="113" width="790" height="919" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1598831061747" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590871816433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -332,10 +340,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1592709818056" />
-    <state width="451" height="166" key="javadoc.popup.new" timestamp="1598830716149">
+    <state width="451" height="166" key="javadoc.popup.new" timestamp="1598831118562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="451" height="166" key="javadoc.popup.new/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1598830716149" />
+    <state width="451" height="166" key="javadoc.popup.new/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1598831118562" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1591513116449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

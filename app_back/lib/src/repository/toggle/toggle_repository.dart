@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:appback_sdk/src/app_config.dart';
+import 'package:appback_sdk/src/app_back_config.dart';
 import 'package:appback_sdk/src/constants/constants.dart';
 import 'package:appback_sdk/src/converters/toggle_converter.dart';
 import 'package:appback_sdk/src/dtos/toggle_parent_dto.dart';
@@ -49,7 +49,7 @@ class ToggleRepository implements IToggleRepository {
   @override
   void getToggles(String endpoint, String token, String router,
       Function(List<Toggle>) onSuccess, Function(AppBackException) onFailure) {
-    AppConfig.instance.routers["toggles"] = router;
+    AppBackConfig.instance.routers["toggles"] = router;
     _client.get("$endpoint$kTOGGLE_URL$kROUTER_SUFFIX$router",
         headers: {kAUTHORIZATION: kBEARER + token}).then((response) {
       if (response.statusCode == 200) {
@@ -71,9 +71,9 @@ class ToggleRepository implements IToggleRepository {
   
   @override
   Future<List<Toggle>> getTogglesAsync({String endpoint, String token, String router}) {
-    endpoint = endpoint ?? AppConfig.instance.endpoint.url;
-    router = router ?? AppConfig.instance.routers["toggles"];
-    token = token ?? AppConfig.instance.token;
+    endpoint = endpoint ?? AppBackConfig.instance.endpoint.url;
+    router = router ?? AppBackConfig.instance.routers["toggles"];
+    token = token ?? AppBackConfig.instance.token;
     return _client.get("$endpoint$kTOGGLE_URL$kROUTER_SUFFIX$router", headers: {kAUTHORIZATION: kBEARER + token}).then((response) {
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
