@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:appback_sdk/src/app_config.dart';
 import 'package:appback_sdk/src/constants/constants.dart';
 import 'package:appback_sdk/src/dtos/auth_dto.dart';
 import 'package:appback_sdk/exceptions/app_back_exception.dart';
@@ -20,6 +21,8 @@ class TokenRepository implements ITokenRepository {
         AuthDto authDto = AuthDto.fromJson(jsonDecode(response.body));
         Token token = authDto.convertAuthDtoToTokenModel();
         Endpoint endpoint = authDto.convertAuthDtoToEndPointModel();
+        AppConfig.instance..token = token.accessToken
+          ..endpoint = endpoint;
         onSuccess(Auth(token, endpoint));
       } else if (response.statusCode == 400) {
         throw AppBackException("Bad request");
